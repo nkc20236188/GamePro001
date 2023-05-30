@@ -13,7 +13,10 @@ public class MyShotContoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0f, 0.05f, 0);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        Vector2 now = rb.position;
+        now += new Vector2(0.07f, 0);
+        rb.position = now;
 
         //画面から消えたらオブジェクトを消す
         if (transform.position.x > 15f)
@@ -24,7 +27,7 @@ public class MyShotContoller : MonoBehaviour
         //敵にあたったら消える
         void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.tag == "Enemy_0Prehab")
+            if (other.gameObject.name == "Enemy_0Prehab")
             {
                 Destroy(gameObject);
             }

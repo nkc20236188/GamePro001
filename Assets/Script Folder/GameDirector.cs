@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class GameDirector : MonoBehaviour
 
     void Update()
     {
-        
+        //if (Timer == 0){
+        //    SceneManager.LoadScene("TitleScene");
+        //}
     }
 }

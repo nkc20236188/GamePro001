@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6161278410256066388}
   - component: {fileID: 2336906475930593832}
   - component: {fileID: 4684675805977148911}
-  - component: {fileID: 8531913689355834021}
   - component: {fileID: 4802812910608067066}
-  - component: {fileID: -4115085668662825590}
+  - component: {fileID: 7503352045592932091}
+  - component: {fileID: 6899309801704117187}
   m_Layer: 0
   m_Name: Enemy_0Prefab
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508811472754426882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: -1.4172055, z: 0.9236282}
+  m_LocalPosition: {x: 15, y: -1.4172055, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -109,7 +109,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &8531913689355834021
+--- !u!114 &4802812910608067066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508811472754426882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53026d73a83a5d046b5c63b8c4542b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &7503352045592932091
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,19 +156,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
---- !u!114 &4802812910608067066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508811472754426882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53026d73a83a5d046b5c63b8c4542b95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!50 &-4115085668662825590
+--- !u!50 &6899309801704117187
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
