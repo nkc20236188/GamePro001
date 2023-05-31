@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MyShotGenerater : MonoBehaviour
 {
-    public GameObject MyShot_0PRehab;
+    
+
+    public GameObject MyShot_0Prehab;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +17,11 @@ public class MyShotGenerater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float f = Input.GetAxisRaw("Fire1");
         //spase‚ª‰Ÿ‚³‚ê‚½‚ç‹…‚ªo‚é
-        //if (Input.GetKeyDown("Jump"))
-        //{
-        //    GameObject go = Instantiate(MyShot_0Prefab);
-        //}
+        if (f == 1)
+        {
+            GameObject go = Instantiate(MyShot_0Prehab);
+        }
     }
 }

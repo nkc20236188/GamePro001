@@ -24,13 +24,14 @@ public class MyShotContoller : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //ìGÇ…Ç†ÇΩÇ¡ÇΩÇÁè¡Ç¶ÇÈ
-        void OnTriggerEnter2D(Collider2D other)
+        
+    }
+    //ìGÇ…Ç†ÇΩÇ¡ÇΩÇÁè¡Ç¶ÇÈ
+    void OnCollisonEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Enemy_0Prehab")
         {
-            if (other.gameObject.name == "Enemy_0Prehab")
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
     }
 }

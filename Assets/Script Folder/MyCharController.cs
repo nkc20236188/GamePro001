@@ -5,18 +5,27 @@ using UnityEngine;
 
 public class MyCharController : MonoBehaviour
 {
+    //Playerの速度
     float speed = 0.02f;
 
+    //移動範囲
     float LeftPosX = -8.25f;
     float RightPosX = 8.3f;
     float BottomPosY = -4.55f;
     float TopPosY = 4.6f;
+
+    //アニメーターコンポーネントを保存する変数
+    Animator anm;
+
 
     GameObject Player;
 
     void Start()
     {
         Player = GameObject.Find("MyChar_0");
+
+        //コンポーネントを取得
+        anm = GetComponent<Animator>();
     }
 
     void Update()
@@ -30,5 +39,22 @@ public class MyCharController : MonoBehaviour
 
         Player.transform.position = (new Vector3(Mathf.Clamp(Player.transform.position.x, LeftPosX, RightPosX),
                Mathf.Clamp(Player.transform.position.y, BottomPosY, TopPosY)));
+
+
+        
+
+        //キー入力によるアニメーションの変更
+        if (y == 0)
+        {
+            anm.Play("MyChar_0");
+        }
+        else if (y == 1)
+        {
+            anm.Play("MyChar_0L");
+        }
+        else
+        {
+            anm.Play("MyChar_0R");
+        }
     }
 }
