@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MyShotContoller : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class MyShotContoller : MonoBehaviour
     //ìGÇ…Ç†ÇΩÇ¡ÇΩÇÁè¡Ç¶ÇÈ
     void OnCollisonEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Enemy_0Prehab")
+        if (other.gameObject.name == "Enemy_0Prefab")
         {
             Destroy(gameObject);
         }

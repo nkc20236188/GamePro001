@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -39,9 +43,16 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
 
-        //    //ぶつかったらタイマーが減る
-        //    //GameObject director = GameObject.Find("GameDirextor");
-        //    //director.GetComponent<GameDirector>().DecreaseTime();
+            //ぶつかったらタイトルシーンに戻る
+            SceneManager.LoadScene("TitleScene");
+
+        }
+
+        if (c.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+
+
         }
     }
 }
