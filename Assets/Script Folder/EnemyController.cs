@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
     
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,7 @@ public class EnemyController : MonoBehaviour
 
         
     }
-    //？？？？？？？？？？？
+    
     //オブジェクトがぶつかったら消える
     void OnCollisionEnter2D(Collision2D c)
     {
@@ -43,6 +44,7 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
 
+            
             //ぶつかったらタイトルシーンに戻る
             //SceneManager.LoadScene("TitleScene");
 

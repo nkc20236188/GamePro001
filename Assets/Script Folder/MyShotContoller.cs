@@ -31,7 +31,7 @@ public class MyShotContoller : MonoBehaviour
     //ìGÇ…Ç†ÇΩÇ¡ÇΩÇÁè¡Ç¶ÇÈ
     void OnCollisonEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Enemy_0Prefab")
+        if (other.gameObject.name == "Enemy_0Prefab(Clone)")
         {
             Destroy(gameObject);
         }

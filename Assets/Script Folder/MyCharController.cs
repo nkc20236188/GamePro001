@@ -17,8 +17,12 @@ public class MyCharController : MonoBehaviour
     //アニメーターコンポーネントを保存する変数
     Animator anm;
 
+    
+
 
     GameObject Player;
+
+    public GameObject MyShot_0;
 
     void Start()
     {
@@ -26,10 +30,15 @@ public class MyCharController : MonoBehaviour
 
         //コンポーネントを取得
         anm = GetComponent<Animator>();
+
+        
     }
 
     void Update()
     {
+        
+
+
         //x軸方向 移動
         float x = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(x * speed, 0 , 0);
@@ -55,6 +64,13 @@ public class MyCharController : MonoBehaviour
         else
         {
             anm.Play("MyChar_0R");
+        }
+
+        //ショット
+        if (Input.GetButtonDown("Jump"))
+        {
+            GameObject playerShot = Instantiate(MyShot_0, transform.position + transform.forward * 3 + transform.up * 1, transform.rotation) as GameObject;
+            //playerShot.transform.position = this.transform.position;
         }
     }
 }
