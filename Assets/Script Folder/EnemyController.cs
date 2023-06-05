@@ -44,14 +44,7 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
 
             //ぶつかったらタイトルシーンに戻る
-            SceneManager.LoadScene("TitleScene");
-
-        }
-
-        if (c.gameObject.tag == "Enemy")
-        {
-            Destroy(gameObject);
-
+            //SceneManager.LoadScene("TitleScene");
 
         }
     }
